@@ -6,7 +6,7 @@ class VideoProcessor:
         frm = frame.to_ndarray(format="bgr24")
 
 
-        return frame.av.VideoFrame.from_ndarray(frm, format='bgr24')
+        return av.VideoFrame.from_ndarray(frm, format='bgr24')
 
 
 webrtc_streamer(key="key", video_processor_factory=VideoProcessor)
